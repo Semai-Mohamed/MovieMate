@@ -21,5 +21,5 @@ const SearchBar = ({ onPress }: SearchBarProps) => {
     </View>
   )
 }
-
+    
 export default SearchBar
