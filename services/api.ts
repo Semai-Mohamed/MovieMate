@@ -1,24 +1,23 @@
 export const TMDB_CONFIG = {
-    BASE_URL : 'https://api.themoviedb.org/3',
-    API_KEY : process.env.EXPO_PUBLIC_MOVIE_API_KEY,
-    headers : {
-        accept : 'application/json',
-        Authorization : `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`
-    }
-}
+  BASE_URL: "https://api.themoviedb.org/3",
+  API_KEY: process.env.EXPO_PUBLIC_MOVIE_API_KEY,
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`,
+  },
+};
 
-export const fetchMovie = async ({query} : {query : string}) => {
-    const endpoint = query 
-    ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${query}` 
+export const fetchMovie = async ({ query }: { query: string }) => {
+  const endpoint = query
+    ? `${TMDB_CONFIG.BASE_URL}/search/movie?query=${query}`
     : `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
-    const response = await fetch(endpoint , {
-        method : 'GET',
-        headers : TMDB_CONFIG.headers
-    })
-    if(!response.ok){
-        throw new Error ('Failde to fetch movies')
-    }
-    const data = await response.json();
-    return data;
-
-}
+  const response = await fetch(endpoint, {
+    method: "GET",
+    headers: TMDB_CONFIG.headers,
+  });
+  if (!response.ok) {
+    throw new Error("Failde to fetch movies");
+  }
+  const data = await response.json();
+  return data;
+};

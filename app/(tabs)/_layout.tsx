@@ -34,7 +34,7 @@ const _layout = () => {
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
-     
+
         tabBarStyle: {
           backgroundColor: "#0f0D23",
           borderRadius: 50,
