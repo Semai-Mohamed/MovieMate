@@ -4,6 +4,7 @@ import SignUp from "./signUp";
 import { images } from "@/constants/images";
 import InputField from "@/components/InputField";
 import { icons } from "@/constants/icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 const SignIn = () => {
     const [isSecureVisible, setIsSecureVisible] = React.useState(false);
@@ -22,6 +23,10 @@ const SignIn = () => {
         <InputField placeholder="Enter your userName" value={userName} onChangeText={(text) => setUserName(text)}></InputField>
         <Text className="text-xl text-white font-bold ">password</Text>
         <InputField placeholder="Enter your password" secure={true} isSecureVisible={isSecureVisible} setIsSecureVisible={() => setIsSecureVisible(!isSecureVisible)} value={password} onChangeText={(text) => setPassword(text)}></InputField>
+        <View className="mt-20   bg-white w-[60%] py-1 rounded-3xl flex flex-row   justify-center items-center">
+            <Image source={icons.google} className="size-16"></Image>
+            <Text className="text-[#030014] text-lg font-semibold"> Google</Text>
+        </View>
       </View>
     </View>
   );
