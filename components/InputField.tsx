@@ -22,10 +22,10 @@ const InputField = ({ onChangeText, value, placeholder, secure = false, setIsSec
         placeholder={placeholder}
         secureTextEntry={secure && !isSecureVisible}
       ></TextInput>
-     ({secure&& 
+     {secure&& (
       <TouchableOpacity onPress={setIsSecureVisible}>
         <Ionicons name={isSecureVisible ? "eye-off" : "eye"} size={24} color="white" />
-      </TouchableOpacity>})
+      </TouchableOpacity>)}
     </View>
   );
 };

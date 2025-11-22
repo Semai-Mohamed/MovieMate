@@ -1,12 +1,12 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import SignUp from "./signUp";
 import { images } from "@/constants/images";
 import InputField from "@/components/InputField";
 import { icons } from "@/constants/icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const SignIn = () => {
+    const router = useRouter();
     const [isSecureVisible, setIsSecureVisible] = React.useState(false);
     const [password, setPassword] = React.useState("");
     const [userName, setUserName] = React.useState("");
@@ -23,6 +23,15 @@ const SignIn = () => {
         <InputField placeholder="Enter your userName" value={userName} onChangeText={(text) => setUserName(text)}></InputField>
         <Text className="text-xl text-white font-bold ">password</Text>
         <InputField placeholder="Enter your password" secure={true} isSecureVisible={isSecureVisible} setIsSecureVisible={() => setIsSecureVisible(!isSecureVisible)} value={password} onChangeText={(text) => setPassword(text)}></InputField>
+          <TouchableOpacity 
+          className="w-full mt-8 items-center justify-center"
+          activeOpacity={0.8}
+        >
+            <View className=" w-[40%] py-4 rounded-2xl shadow-lg shadow-black/25 flex-row justify-center items-center border border-white/10">
+              <Text className="text-white text-xl font-bold tracking-wider uppercase" onPress={()=> router.push('/')}>Sign In</Text>
+            </View>
+        </TouchableOpacity>
+       
         <View className="mt-20   bg-white w-[60%] py-1 rounded-3xl flex flex-row   justify-center items-center">
             <Image source={icons.google} className="size-16"></Image>
             <Text className="text-[#030014] text-lg font-semibold"> Google</Text>

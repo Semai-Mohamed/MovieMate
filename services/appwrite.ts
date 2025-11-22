@@ -1,11 +1,33 @@
-import { Client, Databases, ID, Query } from "react-native-appwrite";
+import { Account, Client, Databases, ID, Query } from "react-native-appwrite";
 const DATABASE_ID = process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID!;
-const COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID!;
+const COLLECTION_ID = process.env.EXPO_PUBLIC_APPWRITE_MOVIE_COLLECTION_ID!;
 
 const client = new Client()
   .setEndpoint(process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!) // Your API Endpoint
   .setProject(process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!); // Your project ID
 const databases = new Databases(client);
+const account = new Account(client);
+
+export const createUser = async (
+  email: string,
+  password: string,
+  username: string,
+) => {
+  try {
+    const newAccount = await account.create(
+      ID.unique(),
+      email,
+      password,
+      username,
+    );
+
+    return newAccount;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
+
 export const updateSearchCount = async (query: string, movie: Movie) => {
   try {
     const results = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, [
