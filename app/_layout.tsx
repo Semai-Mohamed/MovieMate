@@ -3,18 +3,18 @@ import "./global.css";
 import { StatusBar } from "react-native";
 export default function RootLayout() {
   return (
-   <>
-    <StatusBar hidden={true} />
-    <Stack>
-      <Stack.Screen
-        name="(tabs)"
-        options={{ headerShown: false }}
-      ></Stack.Screen>
-      <Stack.Screen
-        name="movie/[id]"
-        options={{ headerShown: false }}
-      ></Stack.Screen>
-    </Stack>
+    <>
+      <StatusBar hidden={true} />
+      <Stack>
+        <Stack.Screen
+          name="(tabs)"
+          options={{ headerShown: false }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="movie/[id]"
+          options={{ headerShown: false }}
+        ></Stack.Screen>
+      </Stack>
     </>
   );
 }
