@@ -1,6 +1,8 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { icons } from "@/constants/icons";
+import SignIn from "../(auth)/signIn";
+import { Link } from "expo-router";
 
 const Profile = () => {
   return (
@@ -11,12 +13,17 @@ const Profile = () => {
           className="size-10"
           tintColor={"#fff"}
         ></Image>
-        <Text className="text-gray-500 text-base ">Profile</Text>
+        <View className=" flex flex-col">
+          <Link href="/(auth)/signIn" asChild>
+            <Text className="text-gray-500 text-base mb-5">Sign In</Text>
+          </Link>
+          <Link href="/(auth)/signUp" asChild>
+            <Text className="text-gray-500 text-base"> Sign Up</Text>
+          </Link>
+        </View>
       </View>
     </View>
   );
 };
 
 export default Profile;
-
-const styles = StyleSheet.create({});
