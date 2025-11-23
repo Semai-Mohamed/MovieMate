@@ -10,7 +10,6 @@ const Profile = () => {
         <View className="w-full flex flex-col items-center gap-6">
           <Text className="text-white text-2xl font-bold mt-2">My Profile</Text>
 
-          {/* Mock User Info */}
           <View className=" p-6 rounded-2xl w-full items-center border ">
             <Image
           source={icons.person}
@@ -21,8 +20,8 @@ const Profile = () => {
             <Text className="text-gray-300 text-sm"></Text>
             <View className="flex-row mt-4 gap-4">
               <View className="items-center">
-          <Text className="text-white font-bold text-lg">12</Text>
-          <Text className="text-gray-400 text-xs">Orders</Text>
+          <Text className="text-white font-bold text-lg">3</Text>
+          <Text className="text-gray-400 text-xs">Saved</Text>
               </View>
               <View className="w-[1px] h-full bg-gray-600" />
               <View className="items-center">
