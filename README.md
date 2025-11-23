@@ -101,13 +101,17 @@ This project is licensed under the MIT License.
   <img src="assets/images/1000055842.jpg" alt="Auth Screen" width="200" />
   <img src="assets/images/1000055837.jpg" alt="Home Screen" width="200" />
    <img src="assets/images/1000055843.jpg" alt="Fetch Screen" width="200" />
-  <img src="assets/images/1000055839.jpg" alt="Search Screen" width="200" />
+  
    >    
 </div>
 <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 10px;">
+<img src="assets/images/1000055839.jpg" alt="Search Screen" width="200" />
  <img src="assets/images/1000055838.jpg" alt="Movie Details Screen" width="200" />
   <img src="assets/images/1000055840.jpg" alt="Saved Movies Screen" width="200" />
-   <img src="assets/images/1000055847.jpg" alt="No Movie Screen" width="200" />
+   </div>
+
+<div style="display: flex; flex-direction: row; gap: 10px; margin-top: 10px;">
+<img src="assets/images/1000055847.jpg" alt="No Movie Screen" width="200" />
   <img src="assets/images/1000055846.jpg" alt="Profile Screen" width="200" />
+
 </div>
- 
